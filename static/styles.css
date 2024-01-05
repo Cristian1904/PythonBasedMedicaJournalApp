@@ -1,0 +1,92 @@
+/* styles.css */
+
+body {
+    
+    background-image: url('lined_paper.png');
+    background-repeat: repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.circle {
+    font-family: 'Comic Sans MS', cursive;
+    width: 400px; /* Adjust the size of the circle as needed */
+    height: 400px; /* Should be equal to width to make a perfect circle */
+    background-color: #FFFFFF; /* Color of the circle */
+    border-radius: 50%; /* Makes the div a circle */
+    position: absolute; /* Allows absolute positioning */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    overflow: hidden; /* Hide content that overflows the box */
+    max-width: 100%; /* Maximum width of the text within the circle */
+    max-height: 100%; /* Maximum height of the text within the circle */
+    cursor: pointer;
+    border-color: #FFFFFF;
+    
+    transition: border-color 1s, transform 1s;
+}
+
+.circle:hover
+{
+    border: 6px solid brown;
+    transform: scale(1.05); /* Scale up the circle on hover */
+}
+.small_circle:hover 
+{
+    border: 6px solid brown;
+}
+.small_circle
+{
+    font-family: 'Comic Sans MS', cursive;
+    width: 200px; /* Adjust the size of the circle as needed */
+    height: 200px; /* Should be equal to width to make a perfect circle */
+    background-color: #FFFFFF; /* Color of the circle */
+    border-radius: 50%; /* Makes the div a circle */
+    position: absolute; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    overflow: hidden; /* Hide content that overflows the box */
+    max-width: 100%; /* Maximum width of the text within the circle */
+    max-height: 100%; /* Maximum height of the text within the circle */
+    cursor: pointer;
+    border: 6px solid white;
+    border-color: #FFFFFF;
+    transition: border-color 1s, transform 1s;
+}
+
+.circle1 {
+    top: 10%;
+}
+
+.circle2 {
+    
+}
+
+.circle3 {
+    
+}
+
+.circle4 {
+   
+}
+
+.title {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 60px;
+    color: maroon;
+    position: absolute;
+    top: 10%; 
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Place the title above other elements */
+    
+    }
+
+
