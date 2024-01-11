@@ -31,11 +31,13 @@ posts = [
 def home():
    about = get_url('about')
    jurnal = get_url('jurnal')
+
    return render_template('home.html', posts = posts, about_link = about, jurnal_link = jurnal)
 
 @app.route('/about')
 def about():
    home = get_url('home')
+   print(home)
    return render_template('about.html', posts = posts, home_link = home)
 
 @app.route('/jurnal')

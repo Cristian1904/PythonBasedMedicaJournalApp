@@ -17,7 +17,7 @@ body {
     height: 400px; /* Should be equal to width to make a perfect circle */
     background-color: #FFFFFF; /* Color of the circle */
     border-radius: 50%; /* Makes the div a circle */
-    position: absolute; /* Allows absolute positioning */
+    position: relative; /* Allows absolute positioning */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,21 +61,11 @@ body {
     transition: border-color 1s, transform 1s;
 }
 
-.circle1 {
-    top: 10%;
-}
+.circle1 { top: 20%; left: 75%; transform: translateX(-50%); }
+.circle2 { top: 60%; right: 10%; transform: translateY(-50%); }
+.circle3 { top: 20%; left: 25%; transform: translateX(-50%); }
+.circle4 { top: 60%; left: 10%; transform: translateY(-50%); }
 
-.circle2 {
-    
-}
-
-.circle3 {
-    
-}
-
-.circle4 {
-   
-}
 
 .title {
     font-family: 'Comic Sans MS', cursive;

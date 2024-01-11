@@ -1,7 +1,3 @@
-function redirectToHome() {
-    window.location.href = '/about';
-}
-
-function redirectToJournal() {
-    window.location.href = '/jurnal';
+function redirectToPage(string) {
+    window.location.href = '/'+string;
 }
