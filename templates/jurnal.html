@@ -1,9 +1,38 @@
+<!-- jurnal.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurnal de Activități</title>
+    <link rel="stylesheet" href="static\jurnal.css">
 </head>
 <body>
-    <h1>Journal List</h1>
+
+<div class="container">
+    <h1>Jurnal de Activități</h1>
+    <form method="POST" action="/jurnal">
+        <label for="selectDate">Selectați data:</label>
+        <input type="date" id="selectDate" name="selectDate" required>
+
+        <div class="entry">
+            <label for="activities">Activități fizice:</label>
+            <textarea id="activities" name="activities" rows="4" placeholder="Introduceți activitățile fizice" required></textarea>
+        </div>
+
+        <div class="entry">
+            <label for="meals">Mese:</label>
+            <textarea id="meals" name="meals" rows="4" placeholder="Introduceți mesele" required></textarea>
+        </div>
+
+        <div class="entry">
+            <label for="health">Starea de sănătate:</label>
+            <textarea id="health" name="health" rows="4" placeholder="Introduceți starea de sănătate" required></textarea>
+        </div>
+
+        <button type="submit">Trimite</button>
+    </form>
+</div>
+
 </body>
 </html>

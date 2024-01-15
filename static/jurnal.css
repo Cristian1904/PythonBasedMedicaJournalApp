@@ -1,0 +1,65 @@
+body {
+    
+    background-image: url('lined_paper.png');
+    background-repeat: repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #c47a3526;
+    width: 60%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(85, 47, 24, 0.8);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.entry {
+    margin-bottom: 20px;
+}
+
+
+button {
+    background-color: brown;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    bottom: -10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
