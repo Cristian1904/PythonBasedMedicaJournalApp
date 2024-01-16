@@ -12,7 +12,7 @@ def home():
 
 @app.route('/about')
 def about():
-    return render_template('about.html', home_link=home)
+    return render_template('about.html')
 
 @app.route('/jurnal', methods=['GET', 'POST'])
 def jurnal():
@@ -35,6 +35,37 @@ def jurnal():
             file.write(f"Mese: {meals}\n")
             file.write(f"Starea de sănătate: {health_status}\n\n")
     return render_template('jurnal.html')
+
+def get_recommendations(sickness):
+    # Define a function to read recommendations from a file based on the selected sickness
+    target_folder = 'sickness_recommendations'
+    file_path = os.path.join(target_folder, f'{sickness}.txt')
+    try:
+        with open(file_path, 'r') as file:
+            recommendations = file.readlines()
+            if not recommendations:
+                return "No recommendations available for this sickness."
+            return recommendations
+    except FileNotFoundError:
+        return "No recommendations available for this sickness."
+    except Exception as e:
+        return f"An error occurred: {str(e)}"
+@app.route('/sickness', methods=['GET', 'POST'])
+@app.route('/sickness', methods=['GET', 'POST'])
+def sickness():
+    selected_sickness = None
+    recommendations = None
+
+    if request.method == 'POST':
+        selected_sickness = request.form.get('sickness')
+        print(f"Selected sickness: {selected_sickness}")
+        recommendations = get_recommendations(selected_sickness)
+        print(f"Final recommendations: {recommendations}")
+
+    if recommendations is None:
+        recommendations = ['No recommendations available for this sickness.']
+
+    return render_template('sickness.html', selected_sickness=selected_sickness, recommendations=recommendations)
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/sickness.css">
+
+    <title>Sickness</title>
+</head>
+<body>
+    <div id = "formbox">
+    <h1>Select your sickness from the dropdown menu</h1>
+    <form method="POST">
+        <label for="sickness">Choose a sickness:</label>
+        <select id="sickness" name="sickness">
+            <option value="flu">Flu</option>
+            <option value="cold">Cold</option>
+            <option value="headache">Headache</option>
+            <option value="general-allergy">Allergy</option>
+            <option value="muscle-soreness">Muscle Soreness</option>
+            <option value="stomach-ache">Stomach Aches</option>
+        </select>
+        <button type="submit">Get Recommendations</button>
+    </form>
+    </div>
+    <div id="recommendations">
+        
+            <h2>Recommendations for {{ selected_sickness }}</h2>
+            <p id = "text">
+                
+                {% for line in recommendations %}
+                &emsp;{{ line|safe }}
+                {% if not loop.last %}<br>{% endif %}
+                {% endfor %}
+            </p>
+    </div>
+</body>
+</html>
