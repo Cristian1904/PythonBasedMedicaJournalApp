@@ -1,99 +1,117 @@
 body {
     background-image: url('lined_paper.png');
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-width: 500px;
     height: 100vh;
     margin: 0;
+    position: relative;
 }
 
+#top-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+}
+#icon-container img
+{
+    margin-left: auto;
+}
+#top-bar button {
+    background-color: brown;
+    color: #fff;
+    margin: 0 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#top-bar h1 {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+}
+
+#content-container {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#recommendations
+{
+    overflow: scroll;
+}
+#formbox,
+#recommendations {
+    flex: 1;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 20px; /* Add margin-top for spacing */
+}
 #formbox {
     margin: 20px;
     border: 1px solid #ddd;
     background-color: #fff;
-    min-width: 400px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    position: absolute;
     top: 5%;
     left: 10%;
-    width: 30%;
-    height: 80%;
+    width: 50%; /* Adjusted width */
+    height: 100%; /* Adjusted height */
     display: flex;
     flex-direction: column;
-    padding: 30px;
-    text-align: center;
-    align-items: flex-start; /* Align content to the top */
-}
-
-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1; /* Allow the form to grow and occupy all available space */
-}
-
-label {
-    margin-bottom: 10px;
-    font-weight: bold;
-    margin: 40px;
-}
-
-select {
-    font-size:16px;
-    text-align: center;
-    background-color: lightgrey;
-    height: 100px;
-}
-
-select,
-button {
-    width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    margin-top: auto; /* Align the button to the bottom */
-    background-color: brown;
-    color: #fff;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
+    text-align: center;
+    align-items: flex-start;
 }
 
 #recommendations {
-    min-width: 400px;
     border: 1px solid #ddd;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    position: absolute;
     top: 5%;
     left: 50%;
-    width: 30%;
-    height: 80%;
+    width: 20%; /* Adjusted width */
+    height: 100%; /* Adjusted height */
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align content to the top */
     justify-content: center;
-    padding: 30px;
-    align-items: center;
+    padding: 10px; /* Adjusted padding */
+    text-align: center;
     margin: 20px;
+    align-items: center;
 }
 
-#text
-{
-    padding-right: 10px;
+#text {
     text-align: left;
-    flex: 1;
-    overflow-y: auto; /* Make the content vertically scrollable */
+    overflow-y: scroll;
+}
+
+button {
+    margin-top: auto;
+    background-color: brown;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 h2 {

@@ -8,11 +8,19 @@
     <title>Sickness</title>
 </head>
 <body>
+    <div id="top-bar">
+        <button onclick="window.location.href='/home'">Home</button>
+        <h1>Sickness Page</h1>
+        <div id="icon-container"><img src="static\icons8-bookmark-64.png"></div>
+    </div>
+
+
+    <div id="content-container">
     <div id = "formbox">
     <h1>Select your sickness from the dropdown menu</h1>
     <form method="POST">
         <label for="sickness">Choose a sickness:</label>
-        <select id="sickness" name="sickness">
+        <select id="sickness" name="sickness" aria-placeholder="Choose">
             <option value="flu">Flu</option>
             <option value="cold">Cold</option>
             <option value="headache">Headache</option>
@@ -33,6 +41,7 @@
                 {% if not loop.last %}<br>{% endif %}
                 {% endfor %}
             </p>
+    </div>
     </div>
 </body>
 </html>

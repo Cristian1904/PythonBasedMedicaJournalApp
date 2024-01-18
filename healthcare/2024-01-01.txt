@@ -1,0 +1,12 @@
+Date: 2024-01-01
+Activities: running
+Mood: happy
+Sleep: 1
+Water: 0.5 liters
+Symptoms: nausea
+Vital Signs: normal
+Exercise Intensity: low
+Mood Tracker: happy
+Pain Scale: low
+Allergies: pets
+

@@ -50,6 +50,37 @@ body {
 {
     background-color: #45a049;
 }
+
+.entry select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Remove the styling for the textareas */
+.entry textarea {
+    display: none;
+}
+
+/* Add this CSS to place the dropdowns horizontally */
+.entry {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+select[multiple] {
+    height: 100px; /* Adjust the height as needed for multiple selections */
+}
+
+.entry select {
+    width: 30%; /* Adjust the width as needed */
+    margin-right: 10px;
+}
+
 .container {
     background-color: #c47a3526;
     width: 60%;
@@ -72,7 +103,7 @@ label {
     font-weight: bold;
 }
 
-input, textarea {
+input{
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -101,23 +132,4 @@ input, textarea {
 }
  button:hover {
     background-color: #45a049;
-}
-
-.container select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-.container button {
-    background-color: brown;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    bottom: -10px;
 }

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare-table</title>
+    <link rel="stylesheet" href="static\health.css">
+</head>
+<body>
+    <div id="top-bar">
+        <button id="butonel" onclick="window.location.href='/home'">Home</button>
+        <h1>User general health information for healthcare professionals</h1>
+        <div id="icon-container"><img src="static\icons8-bookmark-64.png"></div>
+    </div>
+    <div class="container">
+        <h2>Please complete all fields</h2>
+        <form method="POST">
+            <label for="selectDate">Select date:</label>
+            <input type="date" id="selectDate" name="selectDate" required>
+    
+            <div class="entry">
+                <label for="activities">Physical activities:</label>
+                <select id="activities" name="activities" required>
+                    <option value="running">Cardio</option>
+                    <option value="cycling">Weighlifting</option>
+                </select>
+            </div>
+    
+            <div class="entry">
+                <label for="mood">Mood:</label>
+                <select id="mood" name="mood" required>
+                    <option value="happy">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="sad">Bored</option>
+                    <option value="sad">Distracted</option>
+                    <option value="sad">Tired</option>
+                    <option value="sad">Dizzy</option>
+                </select>
+            </div>
+    
+            <div class="entry">
+                <label for="sleep">Sleep duration:</label>
+                <select id="sleep" name="sleep" required>
+                    {% for hour in range(1, 25) %}
+                        <option value="{{ hour }}">{{ hour }} hour{{ 's' if hour != 1 else '' }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+    
+            <div class="entry">
+                <label for="water">Water intake:</label>
+                <select id="water" name="water" required>
+                    <option value="0.5 liters">0.5 liter</option>
+                    <option value="1 liters">1 liters</option>
+                    <option value="1.5 liters">1.5 liters</option>
+                    <option value="2 liters">2 liters</option>
+                    <option value="2.5 liters">2.5 liters</option>
+                </select>
+            </div>
+
+            <div class="entry">
+                <label for="symptoms">Symptom Tracker:</label>
+                <select id="symptoms" name="symptoms" multiple required>
+                    <option value="headache">Headache</option>
+                    <option value="fatigue">Fatigue</option>
+                    <option value="nausea">Nausea</option>
+                    <option value="fever">Fever</option>
+                    <option value="cough">Cough</option>
+                    <option value="shortness-of-breath">Shortness of Breath</option>
+                    <option value="loss-of-taste-smell">Loss of Taste or Smell</option>
+                    <option value="body-aches">Body Aches</option>
+                    <option value="sore-throat">Sore Throat</option>
+                </select>
+            </div>
+            
+            <div class="entry">
+                <label for="vitalSigns">Vital Signs:</label>
+                <select id="vitalSigns" name="vitalSigns" required>
+                    <option value="normal">Normal</option>
+                    <option value="elevated">Elevated</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            
+            <div class="entry">
+                <label for="exerciseIntensity">Exercise Intensity:</label>
+                <select id="exerciseIntensity" name="exerciseIntensity" required>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            
+            <div class="entry">
+                <label for="moodTracker">Mood Tracker:</label>
+                <select id="moodTracker" name="moodTracker" required>
+                    <option value="happy">Happy</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="sad">Sad</option>
+                    <option value="stressed">Stressed</option>
+                    <option value="excited">Excited</option>
+                    <option value="relaxed">Relaxed</option>
+                    <option value="anxious">Anxious</option>
+                    <option value="angry">Angry</option>
+                </select>
+            </div>
+            
+            <div class="entry">
+                <label for="painScale">Pain Scale:</label>
+                <select id="painScale" name="painScale" required>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            
+            <div class="entry">
+                <label for="allergies">Allergies:</label>
+                <select id="allergies" name="allergies" multiple required>
+                    <option value="pollen">Pollen</option>
+                    <option value="dust">Dust</option>
+                    <option value="pets">Pets</option>
+                    <option value="food">Food</option>
+                    <option value="insects">Insects</option>
+                    <option value="mold">Mold</option>
+                </select>
+            </div>
+            
+    
+            
+    
+            <button type="submit">Trimite</button>
+        </form>
+    </div>
+    
+    
+</body>
+</html>

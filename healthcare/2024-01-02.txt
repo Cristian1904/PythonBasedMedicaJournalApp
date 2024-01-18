@@ -1,0 +1,12 @@
+Date: 2024-01-02
+Activities: running
+Mood: happy
+Sleep: 1 hour/s
+Water: 0.5 liters
+Symptoms: headache, fatigue, nausea, fever, cough
+Vital Signs: normal
+Exercise Intensity: low
+Mood Tracker: happy
+Pain Scale: low
+Allergies: pollen, dust, pets, food, insects
+

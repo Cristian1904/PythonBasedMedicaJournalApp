@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurnal de Activități</title>
+    <link rel="stylesheet" href="static\view.css">
+</head>
+<body>
+    <div id="top-bar">
+        <button id="butonel" onclick="window.location.href='/home'">Home</button>
+        <h1>Daily medical journal</h1>
+        <div id="icon-container"><img src="static\icons8-bookmark-64.png"></div>
+    </div>
+<div class="container">
+    <h2>Activities</h2>
+    <form method="POST">
+        <label for="selectDate">Selectați data:</label>
+        <input type="date" id="selectDate" name="selectDate" required>
+        <button type="submit">Trimite</button>
+    </form>
+    {% if report %}
+        <p>
+            {% for line in report %}
+            &emsp;{{ line|safe }}
+            {% if not loop.last %}<br>{% endif %}
+            {% endfor %}
+        </p>
+    {% else %}
+        <p>No report available for the selected date.</p>
+    {% endif %}
+</div>
+
+</body>
+</html>

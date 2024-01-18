@@ -7,26 +7,30 @@
     <link rel="stylesheet" href="static\jurnal.css">
 </head>
 <body>
-
+    <div id="top-bar">
+        <button id="butonel" onclick="window.location.href='/home'">Home</button>
+        <h1>Daily medical journal</h1>
+        <div id="icon-container"><img src="static\icons8-bookmark-64.png"></div>
+    </div>
 <div class="container">
-    <h1>Jurnal de Activități</h1>
+    <h2>Activities</h2>
     <form method="POST">
         <label for="selectDate">Selectați data:</label>
         <input type="date" id="selectDate" name="selectDate" required>
 
         <div class="entry">
-            <label for="activities">Activități fizice:</label>
-            <textarea id="activities" name="activities" rows="4" placeholder="Introduceți activitățile fizice" required></textarea>
+            <label for="activities">Physical activities:</label>
+            <textarea id="activities" name="activities" rows="4" placeholder="Enter the Physical activities you've done today" required></textarea>
         </div>
 
         <div class="entry">
-            <label for="meals">Mese:</label>
-            <textarea id="meals" name="meals" rows="4" placeholder="Introduceți mesele" required></textarea>
+            <label for="meals">Meals:</label>
+            <textarea id="meals" name="meals" rows="4" placeholder="Enter today's meals" required></textarea>
         </div>
 
         <div class="entry">
-            <label for="health">Starea de sănătate:</label>
-            <textarea id="health" name="health" rows="4" placeholder="Introduceți starea de sănătate" required></textarea>
+            <label for="health">Mood:</label>
+            <textarea id="health" name="health" rows="4" placeholder="Enter your current mood" required></textarea>
         </div>
 
         <button type="submit">Trimite</button>
