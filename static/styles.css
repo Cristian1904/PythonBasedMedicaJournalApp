@@ -15,7 +15,7 @@ body {
     font-family: 'Comic Sans MS', cursive;
     width: 400px; /* Adjust the size of the circle as needed */
     height: 400px; /* Should be equal to width to make a perfect circle */
-    background-color: #FFFFFF; /* Color of the circle */
+    background-color: rgb(255, 222, 175); /* Color of the circle */
     border-radius: 50%; /* Makes the div a circle */
     position: relative; /* Allows absolute positioning */
     display: flex;
@@ -45,7 +45,7 @@ body {
     font-family: 'Comic Sans MS', cursive;
     width: 200px; /* Adjust the size of the circle as needed */
     height: 200px; /* Should be equal to width to make a perfect circle */
-    background-color: #FFFFFF; /* Color of the circle */
+    background-color: rgb(255, 222, 175); /* Color of the circle */
     border-radius: 50%; /* Makes the div a circle */
     position: absolute; 
     display: flex;
