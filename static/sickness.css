@@ -57,7 +57,7 @@ body {
     border-radius: 8px;
     padding: 30px;
     text-align: center;
-    margin-top: 20px; /* Add margin-top for spacing */
+    margin-top: 20px; 
 }
 #formbox {
     margin: 20px;
@@ -67,8 +67,8 @@ body {
     border-radius: 8px;
     top: 5%;
     left: 10%;
-    width: 50%; /* Adjusted width */
-    height: 100%; /* Adjusted height */
+    width: 50%; 
+    height: 100%; 
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -83,13 +83,13 @@ body {
     border-radius: 8px;
     top: 5%;
     left: 50%;
-    width: 20%; /* Adjusted width */
-    height: 100%; /* Adjusted height */
+    width: 20%; 
+    height: 100%; 
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align content to the top */
+    align-items: flex-start; 
     justify-content: center;
-    padding: 10px; /* Adjusted padding */
+    padding: 10px; 
     text-align: center;
     margin: 20px;
     align-items: center;

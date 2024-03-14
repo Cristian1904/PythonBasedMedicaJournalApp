@@ -27,7 +27,6 @@ def jurnal():
         file_name = f"DATA_{selected_date}.txt"
         file_path = os.path.join(target_folder, file_name)
         
-        # Scrie datele în fișierul text
         with open(file_path, 'a', encoding='utf-8') as file:
             file.write(f"Data: {selected_date}\n")
             file.write(f"Activități fizice: {activities}\n")
@@ -48,7 +47,6 @@ def get_recommendations(sickness):
         return None
     except Exception as e:
         return f"An error occurred: {str(e)}"
-    
 def get_report(date):
     target_folder = 'healthcare'
     file_path = os.path.join(target_folder, f'{date}.txt')
@@ -95,7 +93,6 @@ def health():
         file_name = f"{selectDate}.txt"
         file_path = os.path.join(target_folder, file_name)
 
-        # Save form data to a text file inside the folder
         with open(file_path, 'a') as file:
             file.write(f"Date: {selectDate}\n")
             file.write(f"Activities: {activities}\n")
@@ -108,7 +105,7 @@ def health():
             file.write(f"Mood Tracker: {moodTracker}\n")
             file.write(f"Pain Scale: {painScale}\n")
             file.write(f"Allergies: {', '.join(allergies)}\n")
-            file.write('\n')  # Add a separator for each entry
+            file.write('\n')  
 
 
     return render_template('health.html')

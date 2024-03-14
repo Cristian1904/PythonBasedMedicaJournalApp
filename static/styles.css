@@ -13,18 +13,18 @@ body {
 }
 .circle {
     font-family: 'Comic Sans MS', cursive;
-    width: 400px; /* Adjust the size of the circle as needed */
-    height: 400px; /* Should be equal to width to make a perfect circle */
-    background-color: rgb(255, 222, 175); /* Color of the circle */
-    border-radius: 50%; /* Makes the div a circle */
-    position: relative; /* Allows absolute positioning */
+    width: 400px; 
+    height: 400px; 
+    background-color: rgb(255, 222, 175); 
+    border-radius: 50%; 
+    position: relative; 
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    overflow: hidden; /* Hide content that overflows the box */
-    max-width: 100%; /* Maximum width of the text within the circle */
-    max-height: 100%; /* Maximum height of the text within the circle */
+    overflow: hidden; 
+    max-width: 100%; 
+    max-height: 100%;
     cursor: pointer;
     border-color: #FFFFFF;
     
@@ -34,7 +34,7 @@ body {
 .circle:hover
 {
     border: 6px solid brown;
-    transform: scale(1.05); /* Scale up the circle on hover */
+    transform: scale(1.05); 
 }
 .small_circle:hover 
 {
@@ -43,18 +43,18 @@ body {
 .small_circle
 {
     font-family: 'Comic Sans MS', cursive;
-    width: 200px; /* Adjust the size of the circle as needed */
-    height: 200px; /* Should be equal to width to make a perfect circle */
-    background-color: rgb(255, 222, 175); /* Color of the circle */
-    border-radius: 50%; /* Makes the div a circle */
+    width: 200px; 
+    height: 200px; 
+    background-color: rgb(255, 222, 175); 
+    border-radius: 50%; 
     position: absolute; 
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    overflow: hidden; /* Hide content that overflows the box */
-    max-width: 100%; /* Maximum width of the text within the circle */
-    max-height: 100%; /* Maximum height of the text within the circle */
+    overflow: hidden; 
+    max-width: 100%; 
+    max-height: 100%; 
     cursor: pointer;
     border: 6px solid white;
     border-color: #FFFFFF;
@@ -73,9 +73,9 @@ body {
     color: maroon;
     position: absolute;
     top: 8%; 
-    left: 50%; /* Center horizontally */
+    left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2; /* Place the title above other elements */
+    z-index: 2; 
     
     }
 
